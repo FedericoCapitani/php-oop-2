@@ -24,7 +24,15 @@ require __DIR__ . '/db.php';
                 <p>Nome articolo: <?php echo $product->name?></p>
                 <p>Tipo di articolo: <?php echo $product->type_of_article ?></p>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
-                <p>Ha sconto: <?php echo $product->sconto?></p>
+                <p>Ha sconto: 
+                    <?php echo $product->sconto?>
+                
+                </p>
+                <?php if($can_buy) { ?>
+                    <button class="can_buy">Compra subito</button>
+                <?php }else{ ?>
+                    <button class="cannot_buy">carta scaduta</button>
+                <?php } ?>
             </div>
             <?php endforeach ?>
         </div>

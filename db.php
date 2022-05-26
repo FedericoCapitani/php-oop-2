@@ -3,6 +3,16 @@ require_once __DIR__ . '/models/Product.php';
 
 $img_path = 'https://picsum.photos/400/200';
 $is_user = $_GET["word"];
+$expiration_year = $_GET["expire_year"];
+$current_year = 2022;
+$can_buy;
+
+if(filter_var($expiration_year, FILTER_VALIDATE_INT) >= $current_year){
+    $can_buy = true;
+}else{
+    $can_buy = false;
+}
+
 $has_sconto;
 
 if($is_user == 'yes'){
@@ -20,7 +30,6 @@ $products = [
 
 foreach($products as $product){
     $product->setUserPrice($has_sconto);
-    var_dump($product);
 }
 
 // var_dump($products);
