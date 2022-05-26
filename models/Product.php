@@ -18,9 +18,9 @@ class Product
 
     function setUserPrice($sconto){
         if($sconto == true){
-            return $this->price / 5 * 4;
+            $this->price = $this->price / 5 * 4;
         }else{
-            return $this->price;
+            $this->price;
         }
     }
 }

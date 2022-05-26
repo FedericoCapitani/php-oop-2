@@ -13,13 +13,13 @@ if($is_user == 'yes'){
 
 $products = [
     new Product(10, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto),
-    new Product(10, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto),
-    new Product(10, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto),
-    new Product(10, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto)
+    new Product(20, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto),
+    new Product(15, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto),
+    new Product(12, 'Crocchette Monge per cani di taglia piccola', $img_path, 'cibo per animali', $has_sconto)
 ];
 
 foreach($products as $product){
-    $product->setUserPrice($product->sconto);
+    $product->setUserPrice($has_sconto);
     var_dump($product);
 }
 

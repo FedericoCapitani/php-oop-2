@@ -23,7 +23,7 @@ require __DIR__ . '/db.php';
                 <img src="<?php echo $product->img_path ?>" alt="">
                 <p>Nome articolo: <?php echo $product->name?></p>
                 <p>Tipo di articolo: <?php echo $product->type_of_article ?></p>
-                <p>Prezzo: <?php echo $product->price ?>€</p>
+                <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Ha sconto: <?php echo $product->sconto?></p>
             </div>
             <?php endforeach ?>
