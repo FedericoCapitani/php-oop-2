@@ -7,7 +7,6 @@ class Product
     public $img_path;
     public $type_of_article;
     public $sconto;
-    public $user_price;
 
     function __construct(Int $price, String $name, String $img_path, String $type_of_article, Bool $sconto){
         $this->price = $price;
@@ -18,7 +17,7 @@ class Product
     }
 
     function setUserPrice($sconto){
-        if($sconto){
+        if($sconto == true){
             return $this->price / 5 * 4;
         }else{
             return $this->price;
