@@ -21,12 +21,14 @@ require __DIR__ . '/db.php';
             <?php foreach ($products as $product) : ?>
             <div class="card">
                 <img src="<?php echo $product->img_path ?>" alt="">
-                <p>Nome articolo: <?php echo $product->name?></p>
+                <p>Nome articolo: <?php echo $product->name ?></p>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
                 <p>Ha sconto: 
-                    <?php echo $product->sconto?>
+                    <?php echo $product->sconto ?>
                 
                 </p>
+                <p>Peso: <?php echo $product->weight ?> Kg</p>
+                <p>Scade il: <?php echo $product->expiration_date ?></p>
                 <?php if($can_buy) { ?>
                     <button class="can_buy">Compra subito</button>
                 <?php }else{ ?>

@@ -29,8 +29,8 @@ class Cibo extends Product
     public $weight;
     public $expiration_date;
 
-    function __construct(Int $weight, String $expiration_date){
-        parent::__construct();
+    function __construct(Int $price, String $name, String $img_path, Bool $sconto, Int $weight, String $expiration_date){
+        parent::__construct($price, $name, $img_path, $sconto);
         $this->weight = $weight;
         $this->expiration_date = $expiration_date;
     }

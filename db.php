@@ -22,15 +22,15 @@ if($is_user == 'yes'){
 }
 
 $products = [
-    new Product(10, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto),
-    new Product(20, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto),
-    new Product(15, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto),
-    new Product(12, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto)
+    new Cibo(10, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
+    new Cibo(20, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
+    new Cibo(15, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
+    new Cibo(12, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022')
 ];
 
 foreach($products as $product){
     $product->setUserPrice($has_sconto);
 }
 
-// var_dump($products);
+var_dump($products);
 ?>
