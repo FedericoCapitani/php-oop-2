@@ -31,6 +31,7 @@ $products = [
 
 foreach($products as $product){
     $product->setUserPrice($has_sconto);
+    $product->getId();
 }
 
 var_dump($products);

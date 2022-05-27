@@ -16,6 +16,7 @@ class Product
     }
 
     function setUserPrice($sconto){
+
         if($sconto == true){
             $this->price = $this->price / 5 * 4;
         }else{
@@ -26,6 +27,7 @@ class Product
 
 class Cibo extends Product 
 {
+    use Article_Id;
     public $article_type = 'cibo';
     public $weight;
     public $expiration_date;
@@ -40,6 +42,7 @@ class Cibo extends Product
 
 class Cuccia extends Product 
 {
+    use Article_id;
     public $dimensions;
     public $size;
 
@@ -48,6 +51,14 @@ class Cuccia extends Product
         $this->type_of_article = 'essenziali';
         $this->dimensions = $dimensions;
         $this->size = $size;
+    }
+}
+
+trait Article_id {
+    public $id;
+
+    public function getId() {
+        $this->id = rand(100,999);
     }
 }
 ?>
