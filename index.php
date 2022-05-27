@@ -23,12 +23,14 @@ require __DIR__ . '/db.php';
                 <img src="<?php echo $product->img_path ?>" alt="">
                 <p>Nome articolo: <?php echo $product->name ?></p>
                 <p>Prezzo: <?php echo $product->price ?> €</p>
-                <p>Ha sconto: 
-                    <?php echo $product->sconto ?>
-                
-                </p>
+                <p>Ha sconto: <?php echo $product->sconto ?> </p>
+                <? if($product->type_of_article == 'cibo'): ?>
                 <p>Peso: <?php echo $product->weight ?> Kg</p>
                 <p>Scade il: <?php echo $product->expiration_date ?></p>
+                <? elseif($product->type_of_article == 'essenziali'): ?>
+                <p>Dimensioni: <?php echo $product->dimensions ?> </p>
+                <p>Taglia: <?php echo $product->size ?> </p>
+                <? endif; ?>
                 <?php if($can_buy) { ?>
                     <button class="can_buy">Compra subito</button>
                 <?php }else{ ?>

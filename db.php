@@ -25,7 +25,8 @@ $products = [
     new Cibo(10, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
     new Cibo(20, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
     new Cibo(15, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
-    new Cibo(12, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022')
+    new Cibo(12, 'Crocchette Monge per cani di taglia piccola', $img_path, $has_sconto, 10, '23/07/2022'),
+    new Cuccia (34, 'Cuccia per cani Loyal Friend', $img_path, $has_sconto, '80cm x 40cx', 'medio')
 ];
 
 foreach($products as $product){
