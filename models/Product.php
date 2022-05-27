@@ -59,6 +59,9 @@ trait Article_id {
 
     public function getId() {
         $this->id = rand(100,999);
+        if($this->id < 500){
+            // throw new Exception('id not valid');
+        }
     }
 }
 ?>
